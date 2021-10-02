@@ -1,3 +1,7 @@
+:root { 
+  --blue: #00448E;
+}
+
 html,
 body {
   padding: 0;
