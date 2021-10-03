@@ -2,6 +2,12 @@
   --blue: #00448E;
 }
 
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   padding: 0;
@@ -15,6 +21,3 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}

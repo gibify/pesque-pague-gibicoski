@@ -1,16 +1,17 @@
 .container { 
   width: 100%;
   padding: 2rem;
-  border-bottom: 3px solid var(--blue);
+  border-bottom: 3px solid #eaeaea;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 @media (max-width: 480px) {
   .container { 
     padding: 1rem;
-    border-bottom: 2px solid var(--blue);
+    border-bottom: 2px solid v#eaeaea
   }
 }
