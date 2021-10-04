@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
+import { MapSpotButton } from '../MapSpotButton';
+import { PhoneCallButton } from '../PhoneCallButton';
 import { WhatsAppButton } from '../WhatsAppButton';
 
 import styles from './styles.module.scss';
@@ -8,17 +10,17 @@ export function Footer() {
   return (
     <footer className={styles.container}>
       <div>
-        {/* <h1>contato</h1> */}
         <p>(49) 3433-6749</p>
+        <PhoneCallButton />
       </div>
 
       <div>
-        {/* <h1>endereço</h1> */}
-        <p>Pesqueiro do Meio,<br /> Xanxerê - SC</p>
+        <p>Xanxerê - SC</p>
+        <MapSpotButton />
       </div>
 
       <div>
-        {/* <h1>whatsapp</h1> */}
+      <p>(48) 99846-3847</p>
         <WhatsAppButton />
       </div>
     </footer>

@@ -14,38 +14,28 @@
     align-items: center;
     justify-content: space-between;
 
-    h1 {
-      text-transform: uppercase;
-      text-align: center;
-      font-size: 2rem;
-      color: #777;
-    }
-    
     p { 
       color: var(--blue);
       font-size: 1.5rem;
       margin-bottom: 2rem;
+    }
+
+    span { 
+      background-color: var(--blue);
+      padding: 1rem;
+      border-radius: 50px;
     }
   }
 }
 
 @media (max-width: 768px) {
   .container { 
-    flex-direction: column;
-    padding: 1rem;
-    border-bottom: 2px solid #eaeaea;
-
     div {
-      h1 {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-  
+
       p { 
-        color: var(--blue);
-        font-size: 1rem;
+        display: none;
       }
     }
   }
 }
+
