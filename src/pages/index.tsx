@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Link href="/pesqueiro">Pesque Pague</Link>
+        <Link href="/fishing">Pesque Pague</Link>
       </main>
 
       <footer className={styles.footer}>
