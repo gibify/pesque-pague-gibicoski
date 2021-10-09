@@ -1,13 +1,14 @@
+import { GetServerSideProps } from 'next';
+import { v4 as uuidv4 } from 'uuid';
 import Head from 'next/head'
 import Image from 'next/image'
-import { data } from '../components/services/data'
+
 import styles from '../styles/Home.module.scss'
+import api from '../components/services/axios';
 
-interface DataProps {
-  title: string;
-}
 
-export default function Fishing({ title }: DataProps) {
+export default function Fishing({ data }) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +20,7 @@ export default function Fishing({ title }: DataProps) {
         <div className={styles.cards}>
           {data.map(item => {
             return (
-              <div className={styles.card} key={item.title}>
+              <div className={styles.card} key={uuidv4()}>
                 <h1>{item.title}</h1>
                 <Image src='/logo_fish.svg' alt='fish' width='100' height='100' />
               </div>)
@@ -28,4 +29,12 @@ export default function Fishing({ title }: DataProps) {
       </main>
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { data } = await api.get('/api/data')
+
+  return { 
+    props: {data: data}
+  }
 }
