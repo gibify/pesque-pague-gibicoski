@@ -6,14 +6,16 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import api from '../components/services/axios';
 
-
 export default function Fishing({ data }) {
 
   return (
     <div className={styles.container}>
       <Head>
         <meta name="keywords" content="Pesque Pague, Peixe, Filé de Tilápia, Pesqueiro " />
-        <meta name="description" content="Venda de Filé de Tilápia, Vinhos, Cachaça, Salames. Pesque e pague com espaço para lazer com WIFI grátis, servimos porções e bebidas no local." />
+        <meta 
+        name="description" 
+        content="Venda de Filé de Tilápia, Vinhos, Cachaça, Salames. Pesque e pague com espaço para lazer com WIFI grátis, servimos porções e bebidas no local." 
+        />
         <title>Pesque Pague Gibicoski</title>
       </Head>
       <main className={styles.main}>

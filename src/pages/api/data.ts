@@ -7,6 +7,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     {
       id: uuidv4(),
       title: 'Filé de Tilápia',
+      image: '/image/image.png',
+      origem: 'Santa Catarina',
     },
     {
       id: uuidv4(),
