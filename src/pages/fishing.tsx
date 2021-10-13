@@ -1,12 +1,21 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import { v4 as uuidv4 } from 'uuid';
 import Head from 'next/head'
 import Image from 'next/image'
 
-import styles from '../styles/Home.module.scss'
-import api from '../components/services/axios';
+import api from '../components/services/axios'
+
+import styles from '../styles/Fishing.module.scss'
 
 export default function Fishing({ data }) {
+  const router = useRouter();
+  console.log(router)
+  const id = data;
+ 
+  function goToDetails() { 
+    router.push(`/details/${id}`)
+  }
 
   return (
     <div className={styles.container}>
@@ -22,10 +31,13 @@ export default function Fishing({ data }) {
         <div className={styles.cards}>
           {data.map(item => {
             return (
-              <div className={styles.card} key={uuidv4()}>
+              <button
+              onClick={goToDetails}
+              className={styles.card} 
+              key={uuidv4()}>
                 <h1>{item.title}</h1>
                 <Image src='/logo_fish.svg' alt='fish' width='100' height='100' />
-              </div>)
+              </button>)
             })}
         </div>
       </main>
@@ -33,7 +45,7 @@ export default function Fishing({ data }) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const { data } = await api.get('/api/data')
 
   return { 
