@@ -36,7 +36,7 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get<IData>('/api/data')
+  const { data } = await api.get<IData>('api/data')
 
   return { 
     props: { data: data }
