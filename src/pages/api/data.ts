@@ -6,13 +6,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = [
     {
       id: uuidv4(),
-      title: '@pesquepaguegibicoski',
+      title: 'pesquepaguegibicoski',
       icon: '/icons/instagram-icon.svg',
       url: 'https://www.instagram.com/pesquepaguegibicoski'
     },
     {
       id: uuidv4(),
-      title: '@pesquepaguegibicoski',
+      title: 'pesquepaguegibicoski',
       icon: '/icons/facebook-icon.svg',
       url: 'https://www.facebook.com/pesquepaguegibicoski',
     },
